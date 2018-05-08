@@ -6,7 +6,8 @@
 
 class Solution:
     def FindKthToTail(self, head, k):
-        # 设置一个快指针一个慢指针，p2先走k-1步，然后p1和p2同时走，p2走到最后一个时，p1刚好指向倒数第k个
+        # 设置一个快指针一个慢指针，p2先走k-1步(并非先走k步，意在使p2走至正数第k个位置)
+        # 然后p1和p2同时走，p2走到最后一个时，p1刚好指向倒数第k个
         if head == None or k < 1:
             return None
         p1 = p2 = head
