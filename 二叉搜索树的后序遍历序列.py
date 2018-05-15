@@ -12,7 +12,8 @@ class Solution:
         index = 0
         while sequence[index] < root:
             index += 1
-        # 下面这种for循环写法有误    
+        # 下面这种for循环写法有误，上述while循环正确
+        # 问题在于：假设只有左子树,则剩余元素均大于最后一个,则index=0,意为没有左子树,显然不对
         # for i in sequence[:-1]:
         #     if i > root:
         #         index = sequence.index(i)
