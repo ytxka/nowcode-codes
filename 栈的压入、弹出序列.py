@@ -13,6 +13,6 @@ class Solution:
                 while tmp and tmp[-1] == popV[0]:
                     tmp.pop()
                     popV.pop(0)
-            if tmp:
+            if tmp:    # 开始误写成了"if tmp is not None"，结果一直是False
                 return False
             return True
