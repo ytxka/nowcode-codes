@@ -23,7 +23,7 @@ class Solution:
             for i in range(head, len(ss)):
                 ss[head], ss[i] = ss[i], ss[head]
                 self.work(ss, head + 1)
-                # 理解下面这行的含义，并非多余！
+                # 下面这行代码的作用：将字符串复原，以便进行下一次换位
                 ss[head], ss[i] = ss[i], ss[head]
                 
 # following is for test
