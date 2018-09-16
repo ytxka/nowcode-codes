@@ -18,3 +18,10 @@ class Solution:
         else:
             hR = 0
         return max(hL, hR) + 1
+
+class Solution:
+    def TreeDepth(self, pRoot):
+        # 更简洁的写法
+        if not pRoot:
+            return 0
+        return (max(self.TreeDepth(pRoot.left), self.TreeDepth(pRoot.right))) + 1
